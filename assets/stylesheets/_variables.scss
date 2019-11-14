@@ -1,0 +1,23 @@
+
+$color-main: #FF8360;
+$color-border: #8AD;
+$color-font: #5A5A5A;
+$color-back: #FDFDFD;
+$color-back2: #e8e8e8;
+$color-font2: #9F9F9F;
+
+@mixin flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font-large{
+    color: $color-main;
+    font-size: 2.5em;
+    @include font-bold;
+}
+
+@mixin font-bold{ //太字とするfont-weightが後に変更される可能性があるため mixinにしておく。
+    font-weight: 800;
+}
