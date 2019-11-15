@@ -7,6 +7,10 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/layout.css">
+
+    
+    
+    
 </head>
 <body>
     <ul class="menu">
@@ -16,8 +20,12 @@
         <li><span>ドット絵を描く。</span></li>
         <li><span>ゲームをつくる。</span></li>
         <li><span>プログラミングが好き。</span></li>
-        <li><span>文章を書く。</span></li>
+        <li><span>文章を書く。<p id="app">{{ message }}</p></span></li>
     </ul>
-    
+
+    //Vue.js CDN
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    //my file
+    <script type="text/javascript" src=".\assets\javascripts\vue.js"></script>
 </body>
 </html>

@@ -44,7 +44,6 @@ ul.menu li {
 }
 
 ul.menu li:hover {
-  order: 2;
   font-size: 4.0em;
 }
 
