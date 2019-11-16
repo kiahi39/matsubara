@@ -8,20 +8,23 @@
 
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/layout.css">
 
-    
-    
-    
 </head>
 <body>
-    <ul class="menu">
+    <ul id="menu">
         <li><span>松原は、</span></li>
-        <li><span>バンドをやっている。</span></li>
-        <li><span>曲をつくる。</span></li>
+        <li v-on:click='activenum=1' v-bind:class="{'active-menu':activenum==1}"><span>バンドをやっている。</span></li>
+        <li v-on:click='activenum=2' v-bind:class="{'active-menu':activenum==2}"><span>曲をつくる。</span></li>
         <li><span>ドット絵を描く。</span></li>
         <li><span>ゲームをつくる。</span></li>
         <li><span>プログラミングが好き。</span></li>
         <li><span>文章を書く。<p id="app">{{ message }}</p></span></li>
     </ul>
+
+    <div id="app1">
+        <div class="btn">
+            <button v-on:click='active01=!active01' v-bind:class='{active:active01}'>押して！</button>
+        </div>
+    </div>
 
     //Vue.js CDN
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
