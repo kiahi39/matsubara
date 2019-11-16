@@ -57,8 +57,3 @@ ul#menu li:nth-child(1) {
   color: #FDFDFD;
   font-size: 5.0em;
 }
-
-.btn .active {
-  color: yellow;
-  background-color: #000;
-}
