@@ -10,14 +10,13 @@
 
 </head>
 <body>
-    <ul id="menu">
+    <ul id="menu" v-bind:class="{'selected-menu':activenum!=0}">
         <li><span>松原は、</span></li>
-        <li v-on:click='activenum=1' v-bind:class="{'active-menu':activenum==1}"><span>バンドをやっている。</span></li>
-        <li v-on:click='activenum=2' v-bind:class="{'active-menu':activenum==2}"><span>曲をつくる。</span></li>
-        <li><span>ドット絵を描く。</span></li>
-        <li><span>ゲームをつくる。</span></li>
-        <li><span>プログラミングが好き。</span></li>
-        <li><span>文章を書く。</span></li>
+        <li v-on:click="menuclick(1)" v-bind:class="{'active-menu':activenum==1}"><span>バンドをやっている。</span></li>
+        <li v-on:click="menuclick(2)" v-bind:class="{'active-menu':activenum==2}"><span>曲をつくる。</span></li>
+        <li v-on:click="menuclick(3)" v-bind:class="{'active-menu':activenum==3}"><span>ドット絵を描く。</span></li>
+        <li v-on:click="menuclick(4)" v-bind:class="{'active-menu':activenum==4}"><span>プログラミングが好き。</span></li>
+        <li v-on:click="menuclick(5)" v-bind:class="{'active-menu':activenum==5}"><span>器用貧乏。</span></li>
     </ul>
 
     
