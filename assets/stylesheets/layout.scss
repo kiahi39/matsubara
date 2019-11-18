@@ -12,8 +12,15 @@
 html {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 62.5%; //16px * 0.625 = 10px
     color: $color-font;
+}
+body {
+    font-size: 1.4em; //10px * 1.4 = 14px
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
 }
 
 a {
@@ -29,43 +36,81 @@ body{
     background: $color-font;
 }
 
+
+.color-main {
+    color: $color-main;
+}
+
 ul#menu {
-    list-style: none;
+    margin: auto;
+    width: 120vw;
+    height: 95vh;
+
     display: flex;
     flex-direction: column;
+
     border: 10px solid $color-font;
+    list-style: none;
 
     &.selected-menu{    //ul#menu.selected-menu li : いずれかが選択された状態
         li{
-            font-size: 1.0em;
+            font-size: 2.0em;
         }
     }
 
     li{                 //ul#menu li
+        flex: 1;
         display: block;
-        padding: 20px 40px;
+        padding: 10px 40px;
 
         order: 3;
         background: $color-back;
-        font-size: 2.0em;
         @include font-bold;
         border: 2px solid $color-font;
+
         transition: all 300ms 0s ease;
+        font-size: 3.0em;
 
         &:hover{
-
             span{
                 border-bottom: 10px solid $color-font;
             }
         }
         &.active-menu{
-            font-size: 4.0em;
+            flex: 4;
+            font-size: 5.0em;
+            //color: $color-main;
+            span{
+                span{
+                    &.menu-capital{
+                        color: $color-main;
+                    }
+                }
+            }
         }
         &:nth-child(1){
+            flex: 1;
             order: 1;
             background: $color-font;
             color: $color-back;
             font-size: 5.0em;
+            &:hover{
+                span{
+                    border-bottom: 10px solid $color-main;
+                }
+            }
         }
+    }
+}
+
+.shine-maincolor{
+    animation: shine-maincolor 2s ease 0s infinite alternate none running;
+}
+@keyframes shine-maincolor {
+    0% {
+        color: $color-back;
+    }
+    100% {
+        color: $color-main;
     }
 }
