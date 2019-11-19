@@ -58,11 +58,12 @@ body{
 
         transition: all 500ms 0s ease;
 
-        &.selected-menu{    //ul#menu.selected-menu li : いずれかが選択された状態での、選択されてない<li>。
+        &.selected-menu{    //ul#menu.selected-menu li : いずれかが選択された状態
             margin-left: 0;
             width: 50vw;
             
             li{
+                padding: 10px 20px;
                 font-size: 2.0em;
 
             }
@@ -86,11 +87,18 @@ body{
 
             span{
                 border-bottom: 10px solid transparent;
+                span{
+                    border-bottom: 10px solid transparent;
+                    white-space: nowrap;
+                }
             }
 
             &:hover{
                 span{
                     border-bottom: 10px solid $color-font;
+                    span{
+                        border-bottom: 10px solid $color-font;
+                    }
                 }
             }
             &.active-menu{  //選択されている<li>。
@@ -98,11 +106,12 @@ body{
                 //order: 2;
                 background: $color-font;
                 color: $color-back;
-                font-size: 5.0em;
+                font-size: 4.0em;
                 //color: $color-main;
                 span{
-                    border-bottom: 16px solid $color-back;
+                    border-bottom: 10px solid $color-back;
                     span{
+                        border-bottom: 10px solid $color-back;
                         &.menu-capital{
                             color: $color-main;
                         }

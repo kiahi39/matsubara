@@ -14,18 +14,18 @@
     <div id="menu">
 
         <ul v-bind:class="{'selected-menu':activenum!=0}">
-            <li v-on:click="menuclick(0)"><span><span class="shine-maincolor">松</span>原は、</span></li>
+            <li v-on:click="menuclick(0)"><span><span><span class="shine-maincolor">松</span>原は、</span></span></li>
             <li v-on:click="menuclick(1)" v-bind:class="{'active-menu':activenum==1}">
-                <span><span class="menu-capital">バ</span>ンドをやっている。</span>
+                <span><span><span class="menu-capital">バ</span>ンドを</span><span>やっている</span>。
             </li>
             <li v-on:click="menuclick(2)" v-bind:class="{'active-menu':activenum==2}">
-                <span><span class="menu-capital">曲</span>をつくる。</span>
+                <span><span><span class="menu-capital">曲</span>を</span>つくる。</span>
             </li>
             <li v-on:click="menuclick(3)" v-bind:class="{'active-menu':activenum==3}">
-                <span><span class="menu-capital">ド</span>ット絵を描く。</span>
+                <span><span class="menu-capital">コ</span>ードを書く。</span>
             </li>
             <li v-on:click="menuclick(4)" v-bind:class="{'active-menu':activenum==4}">
-                <span><span class="menu-capital">プ</span>ログラミングが好き。</span>
+                <span><span class="menu-capital">ド</span>ット絵を描く。</span>
             </li>
             <li v-on:click="menuclick(5)" v-bind:class="{'active-menu':activenum==5}">
                 <span><span class="menu-capital">器</span>用貧乏。</span>
