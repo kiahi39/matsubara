@@ -37,46 +37,63 @@ body {
   color: #6a9b3d;
 }
 
-ul#menu {
-  margin: auto;
-  width: 120vw;
+#menu ul {
+  margin-left: 10vw;
+  width: 80vw;
   height: 95vh;
   display: flex;
   flex-direction: column;
   border: 10px solid #38372d;
   list-style: none;
+  transition: all 500ms 0s ease;
 }
 
-ul#menu.selected-menu li {
+#menu ul.selected-menu {
+  margin-left: 0;
+  width: 50vw;
+}
+
+#menu ul.selected-menu li {
   font-size: 2.0em;
 }
 
-ul#menu li {
+#menu ul li {
   flex: 1;
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 10px 40px;
   order: 3;
   background: #f0f0f0;
   font-weight: 800;
   border: 2px solid #38372d;
-  transition: all 300ms 0s ease;
+  transition: all 500ms 0s ease;
   font-size: 3.0em;
 }
 
-ul#menu li:hover span {
+#menu ul li span {
+  border-bottom: 10px solid transparent;
+}
+
+#menu ul li:hover span {
   border-bottom: 10px solid #38372d;
 }
 
-ul#menu li.active-menu {
+#menu ul li.active-menu {
   flex: 4;
+  background: #38372d;
+  color: #f0f0f0;
   font-size: 5.0em;
 }
 
-ul#menu li.active-menu span span.menu-capital {
+#menu ul li.active-menu span {
+  border-bottom: 16px solid #f0f0f0;
+}
+
+#menu ul li.active-menu span span.menu-capital {
   color: #6a9b3d;
 }
 
-ul#menu li:nth-child(1) {
+#menu ul li:nth-child(1) {
   flex: 1;
   order: 1;
   background: #38372d;
@@ -84,7 +101,7 @@ ul#menu li:nth-child(1) {
   font-size: 5.0em;
 }
 
-ul#menu li:nth-child(1):hover span {
+#menu ul li:nth-child(1):hover span {
   border-bottom: 10px solid #6a9b3d;
 }
 
