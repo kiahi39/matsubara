@@ -124,17 +124,35 @@ body {
   border-bottom: 10px solid #6a9b3d;
 }
 
-#content div {
+#content {
   background: #6a9b3d;
   width: 0px;
   height: 95vh;
   color: #f0f0f0;
-  transition: all 500ms 0s ease;
+  transition: all 1000ms 0s ease;
   opacity: 0.0;
 }
 
-#content div.open-content {
+#content.open-content {
   opacity: 1.0;
+  width: auto;
+}
+
+.content-outer {
+  display: flex;
+}
+
+.content-header {
+  height: 20%;
+}
+
+.content-inner {
+  transition: all 1000ms 0s ease;
+  width: 0px;
+  overflow: hidden;
+}
+
+.active-content {
   width: 1000px;
 }
 
